@@ -6,9 +6,8 @@
 
 	<title>Svelte app</title>
 
-	<link rel='icon' type='image/png' href='/favicon.png'>
-	<link rel='stylesheet' href='/global.css'>
-	<link rel='stylesheet' href='/build/bundle.css'>
+	<link rel='icon' type='image/png' href='/favicon.png' />
+	<link rel='stylesheet' href='/global.css' />
 
 	<script defer src='/build/bundle.js'></script>
 </head>
@@ -22,7 +21,7 @@
 
 		let elementById = document.getElementById('profileDetails');
 
-		elementById.addEventListener('showLocations', (e) => {
+		elementById.addEventListener('map', (e) => {
 			console.log("Got: " + e.detail);
 		} )
 

@@ -6,7 +6,7 @@
     import type {ProfileDetails} from "./ProfileDetails";
 
     export let profile: string;
-    export let baseurl: string = "http://localhost:8080";
+    export let baseurl: string = "http://localhost:8081";
 
     let profileDetails: ProfileDetails;
     let error: string;
