@@ -1,0 +1,1 @@
+import ProfileDetails from './ProfileDetails.wc.svelte'
