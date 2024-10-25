@@ -20,5 +20,6 @@ let mapUrl =
 iframe {
   min-width: 400px;
   min-height: 400px;
+  border: 1px solid black;
 }
 </style>
