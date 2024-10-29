@@ -5,7 +5,7 @@ import LocationView from "@/location/LocationView.vue";
 </script>
 
 <template>
-  <LocationView v-bind:baseUrl="'http://localhost:5174'"></LocationView>
+  <LocationView v-bind:baseUrl="'http://localhost:4173'"></LocationView>
 </template>
 
 <style>
