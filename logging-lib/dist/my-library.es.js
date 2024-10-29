@@ -1,6 +1,6 @@
-function l(o, n) {
-  console.log(`${o} - ${n}`);
+function r(n, o) {
+  console.log(`Logging v1: ${n} - ${o}`);
 }
 export {
-  l as logWarn
+  r as logWarn
 };

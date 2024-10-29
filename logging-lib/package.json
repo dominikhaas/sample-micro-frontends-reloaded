@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/my-library.umd.js",
-  "module": "dist/my-library.es.js",
+  "main": "dist/logging-lib.umd.js",
+  "module": "dist/logging-lib.es.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
