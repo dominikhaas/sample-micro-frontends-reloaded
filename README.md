@@ -10,6 +10,14 @@ npm run start
 # service running on http://localhost:8081/
 ```
 
+### Build and run location
+```shell
+cd location
+npm run build
+npm run preview
+# service running on http://localhost:4173/
+```
+
 
 ### Build and run shell
 ```shell
@@ -20,8 +28,9 @@ npm run dev
 
 ## Projects
 
-| Project            | Description                                    |
-|--------------------|------------------------------------------------|
-| qa-locations-shell | Root shell project implemented in Vue          |
-| profile            | Micro frontend 'profile' implemented in Svelte |
+| Project            | Description                                                                  |
+|--------------------|------------------------------------------------------------------------------|
+| qa-locations-shell | Root shell project implemented in Vue                                        |
+| profile            | Micro frontend 'profile' implemented as Web Component in Svelte              |
+| location           | Micro frontend 'location' implemented in Vue, exported via module federation |
 
