@@ -1,5 +1,5 @@
 
-import { createApp } from 'vue'
+import {createApp, defineAsyncComponent} from 'vue'
 import App from './App.vue'
 import router from './router'
 
@@ -10,6 +10,9 @@ import * as directives from 'vuetify/directives'
 import 'vuetify/styles'
 
 import '@mdi/font/css/materialdesignicons.css'
+import {createPinia} from "pinia";
+
+
 
 const vuetify = createVuetify({
   components,
@@ -19,7 +22,12 @@ const vuetify = createVuetify({
   },
 })
 
-createApp(App)
+//load remote app via module federation
+const app = createApp(App);
+const LocationApp = defineAsyncComponent(() => import("remote_app/App"));
+app.component("LocationApp", LocationApp);
+
+app.use(createPinia())
   .use(vuetify)
   .use(router)
   .mount('#app')
