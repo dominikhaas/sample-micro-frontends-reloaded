@@ -1,18 +1,20 @@
-import { test, expect } from '@playwright/test';
+import { expect } from '@playwright/test';
 
-test('test profile flow', async ({ page }) => {
-    await page.goto('http://localhost:5173/');
-    await page.getByRole('link', { name: 'Your profile' }).click();
+import { test } from "./test-setup";
 
-    await expect(page.locator('.name')).toBeVisible();
-    await expect((await page.locator('.name').textContent()).length).toBeGreaterThan(0);
+test('test profile flow', async ({ welcomePage, profilePage, mapPage }) => {
+    await welcomePage.goto();
 
-    await page.getByText('Show on map').click();
+    await welcomePage.openProfile();
 
-    await expect(page.locator('iframe')).toBeVisible();
+    await profilePage.checkIsDisplayed();
 
-    await page.getByRole('link', { name: 'Back' }).click();
+    await profilePage.showOnMap();
 
-    await expect(page.locator('.name')).toBeVisible();
-    await expect((await page.locator('.name').textContent()).length).toBeGreaterThan(0);
+
+    await mapPage.checkIsDisplayed();
+
+    await mapPage.goBack();
+
+    await profilePage.checkIsDisplayed();
 });
