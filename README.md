@@ -34,6 +34,15 @@ npm run dev
 # service running on http://localhost:5173/
 ```
 
+## How to test
+1. Start applications like shown aboce
+2. Run e2e tests: 
+```shell 
+cd e2e-tests; 
+npx playwright test --headed --project chromium
+```
+ 
+
 ## Projects
 
 | Project            | Description                                                                  |
@@ -42,4 +51,5 @@ npm run dev
 | profile            | Micro frontend 'profile' implemented as Web Component in Svelte              |
 | location           | Micro frontend 'location' implemented in Vue, exported via module federation |
 | logging-lib        | Shared functionality, provided via module federation                         |
+| e2e-tests          | Integrational e2e tests using playwright                                     |
 
