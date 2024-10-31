@@ -22,6 +22,7 @@ export default defineConfig({
         name: 'host-app',
         remotes: {
           remote_app: "http://localhost:4173/assets/remoteEntry.js",
+           loggingLib: "http://localhost:5001/remoteEntry.js"
         },
         shared: ['vue', 'pinia']
       })

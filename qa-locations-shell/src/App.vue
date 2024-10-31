@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-import {logWarn} from 'logging-lib';
 
 const name = ref("qa-locations");
 
+import {logWarn} from "loggingLib/Logger"
 
 
-logWarn("Shell", "Booted application")
+logWarn("shell", "test3")
+
+//logWarn("Shell", "Booted application")
 </script>
 <template>
   <v-app>
